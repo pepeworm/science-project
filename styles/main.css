@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #111d25;
+  scroll-behavior: smooth;
+}
+
+a {
+  font-size: 1.1rem;
+}
+
+header nav {
+  z-index: 10;
+  transition: 200ms background-color linear;
+  background-color: #1c2830;
+  border-bottom: 1px solid rgba(167, 171, 174, 0.05);
+  height: 4rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header nav .nav-container {
+  height: 100%;
+  width: 100%;
+  padding-right: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .nav-container .logo img {
+  width: 4.5rem;
+  position: absolute;
+  left: 1rem;
+  top: -0.2rem;
+}
+header nav .nav-container .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header nav .nav-container .links .link {
+  list-style: none;
+}
+header nav .nav-container .links .link a {
+  text-decoration: none;
+  color: #0098f7;
+}
+header nav .nav-container .links .link:not(:last-child) {
+  margin-right: 1.5rem;
+}/*# sourceMappingURL=main.css.map */
