@@ -7,14 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Science 10 Element Project</title>
 
+    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <!-- CSS -->
+
     <link rel="stylesheet" href="./styles/main.css">
 
+    <!-- Favicon -->
+
     <link rel="shortcut icon" href="./imgs/atom.png" type="image/x-icon">
+
 </head>
 
 <body>
@@ -33,17 +40,50 @@
 
     <main>
         <section id="main">
+            <div class="container">
+                <div class="description">
+                    <h1>Hello.</h1>
+                    <p>I'm <span class="highlight">Silicon.</span></p>
 
+                    <a href="#about" class="btn"><i class="fa-solid fa-book"></i> Learn More</a>
+                </div>
+
+                <div class="image-container">
+                    <img src="./imgs/silicon.png">
+
+                    <div class="text-overlay">
+                        <p>Si</p>
+                    </div>
+
+                    <div class="backdrop right"></div>
+                    <div class="backdrop left"></div>
+                </div>
+            </div>
         </section>
 
         <section id="about">
+            <img src="./imgs/wave.svg">
 
+            <h2>About</h2>
         </section>
     </main>
 
     <footer>
-        
+        <hr>
+
+        <div class="links">
+            <a href="https://github.com/pepeworm/science-project" class="btn">
+                <i class="fa-brands fa-github"></i> Code
+            </a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; <span class="year"></span> Hao C.</p>
+        </div>
     </footer>
+
+    <script src="https://kit.fontawesome.com/661b14556a.js" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
