@@ -95,7 +95,7 @@ main {
   margin-top: 4rem;
 }
 main #main {
-  padding: 5rem 8rem 7rem 3rem;
+  padding: 5rem 6.5rem 7rem 3rem;
 }
 main #main .container {
   display: flex;
@@ -135,20 +135,8 @@ main #main .container .image-container {
   position: relative;
 }
 main #main .container .image-container img {
-  width: 23rem;
-  background-color: #111d25;
-  border-radius: 50%;
-}
-main #main .container .image-container .text-overlay {
-  background-color: #CCCD99;
-  display: inline-block;
-  position: absolute;
-  top: 40%;
-  right: 44%;
-}
-main #main .container .image-container .text-overlay p {
-  font-size: 3.1rem;
-  color: #111d25;
+  width: 26rem;
+  filter: grayscale(100%);
 }
 main #main .container .image-container .backdrop {
   position: absolute;
@@ -159,8 +147,8 @@ main #main .container .image-container .backdrop {
   border: 1px solid #0098f7;
 }
 main #main .container .image-container .backdrop.right {
-  top: -3rem;
-  right: -3rem;
+  top: -1.5rem;
+  right: -1.5rem;
 }
 main #main .container .image-container .backdrop.left {
   bottom: -3rem;
@@ -182,12 +170,47 @@ main #about h2 {
 }
 main #about .container p {
   display: block;
-  width: 70%;
+  width: 80%;
   margin: auto;
   font-size: 1.7rem;
 }
 main #about .container p:not(:first-child) {
   margin-top: 0.8rem;
+}
+main #about .symbol {
+  height: 15rem;
+  width: 12rem;
+  background-color: #1c2830;
+  margin: 3rem auto 0;
+  border: 1px solid rgba(167, 171, 174, 0.05);
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+main #about .symbol .arrow {
+  position: absolute;
+}
+main #about .symbol .arrow[data-element=atomic-number] {
+  top: 1rem;
+  left: -175px;
+}
+main #about .symbol .arrow[data-element=element-mass] {
+  bottom: 1rem;
+  right: -85px;
+}
+main #about .symbol .top {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+main #about .symbol .top .atomic-number {
+  text-align: left;
+}
+main #about .symbol .bottom .element-symbol {
+  font-size: 5rem;
 }
 
 footer {
@@ -195,6 +218,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 3rem;
 }
 footer .modal {
   position: fixed;
@@ -248,7 +272,7 @@ footer hr {
   border: none;
   border-bottom: 1px solid #1c2830;
   width: 15rem;
-  margin: 3.3rem auto 3.8rem;
+  margin: 3.8rem auto;
 }
 footer .links {
   margin: 0 auto 3rem;

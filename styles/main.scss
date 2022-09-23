@@ -111,7 +111,7 @@ main {
     margin-top: 4rem;
 
     #main {
-        padding: 5rem 8rem 7rem 3rem;
+        padding: 5rem 6.5rem 7rem 3rem;
 
         .container {
             display: flex;
@@ -156,22 +156,8 @@ main {
                 position: relative;
 
                 img {
-                    width: 23rem;
-                    background-color: $primary-bg;
-                    border-radius: 50%;
-                }
-
-                .text-overlay {
-                    background-color: $tertiary;
-                    display: inline-block;
-                    position: absolute;
-                    top: 40%;
-                    right: 44%;
-
-                    p {
-                        font-size: 3.1rem;
-                        color: $primary-bg;
-                    }
+                    width: 26rem;
+                    filter: grayscale(100%);
                 }
 
                 .backdrop {
@@ -183,8 +169,8 @@ main {
                     border: 1px solid $primary;
 
                     &.right {
-                        top: -3rem;
-                        right: -3rem;
+                        top: -1.5rem;
+                        right: -1.5rem;
                     }
 
                     &.left {
@@ -215,12 +201,56 @@ main {
         .container {
             p {
                 display: block;
-                width: 70%;
+                width: 80%;
                 margin: auto;
                 font-size: 1.7rem;
 
                 &:not(:first-child) {
                     margin-top: 0.8rem;
+                }
+            }
+        }
+
+        .symbol {
+            height: 15rem;
+            width: 12rem;
+            background-color: $secondary-bg;
+            margin: 3rem auto 0;
+            border: 1px solid $box-border;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+
+            .arrow {
+                position: absolute;
+
+                &[data-element="atomic-number"] {
+                    top: 1rem;
+                    left: -175px;
+                }
+
+                &[data-element="element-mass"] {
+                    bottom: 1rem;
+                    right: -85px;
+                }
+            }
+
+            .top {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+
+                .atomic-number {
+                    text-align: left;
+                }
+            }
+
+            .bottom {
+                .element-symbol {
+                    font-size: 5rem;
                 }
             }
         }
@@ -232,6 +262,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 3rem;
 
     .modal {
         position: fixed;
@@ -285,6 +316,7 @@ footer {
             }
 
             .modal-body {
+
                 li:not(:first-child),
                 li:not(:last-child) {
                     margin: 1rem auto;
@@ -297,7 +329,7 @@ footer {
         border: none;
         border-bottom: 1px solid $secondary-bg;
         width: 15rem;
-        margin: 3.3rem auto 3.8rem;
+        margin: 3.8rem auto;
     }
 
     .links {
@@ -316,6 +348,7 @@ footer {
     }
 
     .copyright {
+
         p,
         span {
             color: $secondary;
