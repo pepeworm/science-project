@@ -1,6 +1,5 @@
 $primary: #0098f7;
 $secondary: #a7abae;
-$tertiary: #CCCD99;
 $primary-bg: #111d25;
 $secondary-bg: #1c2830;
 $modal-bg: rgba(#000, 0.8);
@@ -51,6 +50,12 @@ li {
     list-style: none;
 }
 
+hr {
+    border: none;
+    border-bottom: 1px solid $secondary-bg;
+    width: 15rem;
+}
+
 .btn {
     background-color: $primary;
     color: $primary-bg;
@@ -59,11 +64,36 @@ li {
     i {
         margin-right: 0.2rem;
     }
+
+    &.secondary {
+        background-color: transparent;
+        border: 1px solid $box-border;
+        color: $secondary;
+        padding: 0.4rem 0.6rem;
+        transition: 100ms background-color linear;
+
+        &:hover {
+            background-color: $box-border;
+        }
+    }
 }
 
 .highlight {
     color: $primary;
     font-weight: 600;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+img.wave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 header {
@@ -110,6 +140,8 @@ header {
 main {
     margin-top: 4rem;
 
+    // Home Page
+
     #main {
         padding: 5rem 6.5rem 7rem 3rem;
 
@@ -135,18 +167,9 @@ main {
                     font-size: 1.7rem;
                 }
 
-                .btn {
+                .btn.secondary {
                     margin-top: 2.5rem;
                     z-index: 1;
-                    background-color: transparent;
-                    border: 1px solid $box-border;
-                    color: $secondary;
-                    padding: 0.4rem 0.6rem;
-                    transition: 100ms background-color linear;
-
-                    &:hover {
-                        background-color: $box-border;
-                    }
                 }
             }
 
@@ -184,15 +207,6 @@ main {
 
     #about {
         position: relative;
-
-        img.wave {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            width: 100%;
-            z-index: -1;
-        }
 
         h2 {
             margin-bottom: 0.8rem;
@@ -251,6 +265,358 @@ main {
             .bottom {
                 .element-symbol {
                     font-size: 5rem;
+                }
+            }
+        }
+    }
+
+    // Model Page
+
+    #model-main {
+        padding-bottom: 3rem;
+
+        .container {
+            margin: 0.8rem auto 3.8rem;
+
+            p {
+                display: block;
+                width: 80%;
+                margin: auto;
+                font-size: 1.7rem;
+
+                &:not(:first-child) {
+                    margin-top: 0.8rem;
+                }
+            }
+        }
+    }
+
+    hr {
+        margin: 3.8rem auto 1rem;
+    }
+
+    #symbol {
+        position: relative;
+
+        h2 {
+            margin-bottom: 0.8rem;
+        }
+
+        .symbol {
+            height: 15rem;
+            width: 12rem;
+            background-color: $secondary-bg;
+            margin: 3rem auto 0;
+            border: 1px solid $box-border;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+
+            .arrow {
+                position: absolute;
+
+                &[data-element="atomic-number"] {
+                    top: 1rem;
+                    left: -180px;
+                }
+
+                &[data-element="chemical-symbol"] {
+                    top: 6.1rem;
+                    left: -195px;
+                }
+
+                &[data-element="element-mass"] {
+                    bottom: 1rem;
+                    right: -85px;
+                }
+            }
+
+            .top {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+
+                .atomic-number {
+                    text-align: left;
+                }
+            }
+
+            .bottom {
+                .element-symbol {
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+
+    #bohr {
+        h2 {
+            margin-bottom: 0.8rem;
+        }
+
+        .bohr {
+            margin: 6rem auto;
+            display: inline-block;
+            position: relative;
+
+            .layer {
+                position: absolute;
+                background: transparent;
+                border-radius: 50%;
+                border: 5px solid $secondary-bg;
+
+                &[data-layer="1"] {
+                    height: 14rem;
+                    width: 14rem;
+                    top: -2rem;
+                    left: -2rem;
+                }
+
+                &[data-layer="2"] {
+                    height: 18rem;
+                    width: 18rem;
+                    top: -4rem;
+                    left: -4rem;
+                }
+
+                &[data-layer="3"] {
+                    height: 22rem;
+                    width: 22rem;
+                    top: -6rem;
+                    left: -6rem;
+                }
+
+                .electron-container {
+                    position: relative;
+                }
+
+                .electron {
+                    height: 1rem;
+                    width: 1rem;
+                    border-radius: 50%;
+                    background-color: $primary;
+                    position: absolute;
+
+                    &[data-layer="1"] {
+                        &:nth-child(1) {
+                            top: -7px;
+                            left: 4.5rem;
+                        }
+
+                        &:nth-child(2) {
+                            top: -6.5px;
+                            left: 8rem;
+                        }
+                    }
+
+                    &[data-layer="2"] {
+                        &:nth-child(1) {
+                            top: -7px;
+                            left: 6.5rem;
+                        }
+
+                        &:nth-child(2) {
+                            top: -7px;
+                            left: 10rem;
+                        }
+
+                        &:nth-child(3) {
+                            top: 6.5rem;
+                            left: -8px;
+                        }
+
+                        &:nth-child(4) {
+                            top: 10rem;
+                            left: -8px;
+                        }
+
+                        &:nth-child(5) {
+                            top: 6.5rem;
+                            right: -8px;
+                        }
+
+                        &:nth-child(6) {
+                            top: 10rem;
+                            right: -8px;
+                        }
+
+                        &:nth-child(7) {
+                            top: 16.9rem;
+                            left: 6.5rem;
+                        }
+
+                        &:nth-child(8) {
+                            top: 16.9rem;
+                            left: 10rem;
+                        }
+                    }
+
+                    &[data-layer="3"] {
+                        &:nth-child(1) {
+                            top: -10px;
+                            left: 10.35rem;
+                        }
+
+                        &:nth-child(2) {
+                            top: 10.2rem;
+                            left: -10px;
+                        }
+
+                        &:nth-child(3) {
+                            top: 10rem;
+                            right: -10px;
+                        }
+
+                        &:nth-child(4) {
+                            top: 21rem;
+                            left: 10.2rem;
+                        }
+                    }
+                }
+            }
+
+            .nucleus {
+                margin: auto;
+                background-color: $secondary-bg;
+                height: 10rem;
+                width: 10rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                border: 1px solid $box-border;
+
+                p:nth-child(1) {
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            .arrow {
+                position: absolute;
+
+                &[data-atom-part="electron"] {
+                    top: 4.25rem;
+                    left: calc(-12rem - 15px);
+                }
+
+                &[data-atom-part="shell"] {
+                    top: 8rem;
+                    left: -10.2rem;
+                }
+            }
+        }
+    }
+
+    #energy-level {
+        h2 {
+            margin-bottom: 2.2rem;
+        }
+
+        .energy-level {
+            .layer {
+                margin-bottom: 0.5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .line {
+                    height: 5px;
+                    width: 8rem;
+                    border: 1px solid $box-border;
+                    background-color: $secondary-bg;
+
+                    &:first-child {
+                        margin-right: 0.5rem;
+                    }
+
+                    &:last-child {
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+
+            .nucleus {
+                margin: auto;
+                background-color: $secondary-bg;
+                height: 10rem;
+                width: 10rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                border: 1px solid $box-border;
+
+                p:nth-child(1) {
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+
+    #lewis-dot {
+        h2 {
+            margin-bottom: 0.8rem;
+        }
+
+        .lewis-dot {
+            position: relative;
+            height: 11rem;
+            width: 11rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            border-radius: 50%;
+
+            .electron {
+                position: absolute;
+                background-color: $primary;
+                border-radius: 50%;
+                height: 1rem;
+                width: 1rem;
+
+                &:nth-child(1) {
+                    top: -0.5rem;
+                    left: 5.2rem;
+                }
+
+                &:nth-child(2) {
+                    top: 5rem;
+                    left: -0.5rem;
+                }
+
+                &:nth-child(3) {
+                    top: 5rem;
+                    right: -0.5rem;
+                }
+
+                &:nth-child(4) {
+                    bottom: -0.5rem;
+                    left: 5.2rem;
+                }
+            }
+
+            .nucleus {
+                margin: auto;
+                background-color: $secondary-bg;
+                border: 1px solid $box-border;
+                border-radius: 50%;
+                height: 8rem;
+                width: 8rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    font-size: 4rem;
                 }
             }
         }
@@ -326,9 +692,6 @@ footer {
     }
 
     hr {
-        border: none;
-        border-bottom: 1px solid $secondary-bg;
-        width: 15rem;
         margin: 3.8rem auto;
     }
 

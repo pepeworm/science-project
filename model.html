@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science 10 Element Project</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <!-- Favicon -->
+
+    <link rel="shortcut icon" href="./imgs/atom.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="#" class="logo"><img src="./imgs/atom.png"></a>
+
+                <ul class="links">
+                    <li class="link"><a href="index.html">Home</a></li>
+                    <li class="link"><a href="model.html">Model</a></li>
+                    <li class="link"><a href="video.html">Video</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="model-main">
+            <h1>Model</h1>
+
+            <div class="container">
+                <p>A model is a <span class="highlight">representation</span> of an atom.</p>
+                <p>It can show the <span class="highlight">protons</span>, <span class="highlight">neutrons</span>,
+                    <span class="highlight">electron shells</span>, and <span class="highlight">electrons</span> of the
+                    atom.
+                </p>
+                <p>Can be <span class="highlight">Bohr</span>, <span class="highlight">energy level</span>, <span
+                        class="highlight">Lewis dot</span> diagrams, etc.</p>
+            </div>
+
+            <div class="btn-container">
+                <a href="#symbol" class="btn secondary"><i class="fa-solid fa-book"></i> Learn More</a>
+            </div>
+        </section>
+
+        <section id="symbol">
+            <img src="./imgs/model-wave.svg" class="wave">
+
+            <h2>Symbol</h2>
+
+            <div class="symbol">
+                <div class="arrow" data-element="atomic-number">
+                    <p>Atomic Number <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+
+                <div class="arrow" data-element="chemical-symbol">
+                    <p>Chemical Symbol <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+
+                <div class="arrow" data-element="element-mass">
+                    <p><i class="fa-solid fa-arrow-left"></i> Mass</p>
+                </div>
+
+                <div class="top">
+                    <p class="atomic-number">14</p>
+                </div>
+
+                <div class="bottom">
+                    <p class="element-symbol">Si</p>
+                    <p class="element-name">Silicon</p>
+                    <p class="element-mass">28.086</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="bohr">
+            <h2>Bohr</h2>
+
+            <div class="bohr">
+                <div class="layer" data-layer="1">
+                    <div class="electron-container">
+                        <div class="electron" data-layer="1"></div>
+                        <div class="electron" data-layer="1"></div>
+                    </div>
+                </div>
+                <div class="layer" data-layer="2">
+                    <div class="electron-container">
+                        <div class="electron" data-layer="2"></div>
+                        <div class="electron" data-layer="2"></div>
+                        <div class="electron" data-layer="2"></div>
+                        <div class="electron" data-layer="2"></div>
+                        <div class="electron" data-layer="2"></div>
+                        <div class="electron" data-layer="2"></div>
+                        <div class="electron" data-layer="2"></div>
+                        <div class="electron" data-layer="2"></div>
+                    </div>
+                </div>
+                <div class="layer" data-layer="3">
+                    <div class="electron-container">
+                        <div class="electron" data-layer="3"></div>
+                        <div class="electron" data-layer="3"></div>
+                        <div class="electron" data-layer="3"></div>
+                        <div class="electron" data-layer="3"></div>
+                    </div>
+                </div>
+
+                <div class="nucleus">
+                    <p><span class="highlight underline">Nucleus</span></p>
+                    <p class="proton"><span class="highlight">14</span> Protons</p>
+                    <p class="neutron"><span class="highlight">14</span> Neutrons</p>
+                </div>
+
+                <div class="arrow" data-atom-part="electron">
+                    <p>Electron <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+
+                <div class="arrow" data-atom-part="shell">
+                    <p>Shell <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="energy-level">
+            <h2>Energy Level</h2>
+
+            <div class="energy-level">
+                <div class="layer" data-layer="1">
+                    <div class="line"></div>
+                    <p><span class="highlight">4 e<sup>-</sup></span></p>
+                    <div class="line"></div>
+                </div>
+                <div class="layer" data-layer="2">
+                    <div class="line"></div>
+                    <p><span class="highlight">8 e<sup>-</sup></span></p>
+                    <div class="line"></div>
+                </div>
+                <div class="layer" data-layer="3">
+                    <div class="line"></div>
+                    <p><span class="highlight">2 e<sup>-</sup></span></p>
+                    <div class="line"></div>
+                </div>
+
+                <div class="nucleus">
+                    <p><span class="highlight underline">Nucleus</span></p>
+                    <p class="proton"><span class="highlight">14</span> Protons</p>
+                    <p class="neutron"><span class="highlight">14</span> Neutrons</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="lewis-dot">
+            <h2>Lewis Dot</h2>
+
+            <div class="lewis-dot">
+                <div class="valence-shell">
+                    <div class="electron"></div>
+                    <div class="electron"></div>
+                    <div class="electron"></div>
+                    <div class="electron"></div>
+                </div>
+
+                <div class="nucleus">
+                    <p><span class="highlight">Si</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="modal">
+            <div class="credits-modal">
+                <div class="modal-header">
+                    <p>Credits</p>
+
+                    <span class="close"><i class="fa-sharp fa-solid fa-xmark"></i></span>
+                </div>
+
+                <hr>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            <a href="https://easel.ly/" target="_blank">
+                                Diagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="links">
+            <a href="https://github.com/pepeworm/science-project" target="_blank" class="btn">
+                <i class="fa-brands fa-github"></i> Code
+            </a>
+
+            <a class="btn">
+                <i class="fa-solid fa-file"></i> Credits
+            </a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; <span class="year"></span> Hao C.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/661b14556a.js" crossorigin="anonymous"></script>
+    <script src="./js/model.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/copyright.js"></script>
+</body>
+
+</html>
