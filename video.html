@@ -40,15 +40,53 @@
 
     <main>
         <div id="video">
-            <!-- put video here -->
-            <!-- create a "transcribe" modal that shows the entire script -->
-        </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JXOxc_2F5cs"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
 
-        <!-- place transcribe button here -->
+            <div class="transcribe">
+                <h1>Transcript</h1>
+
+                <div class="container">
+                    <p>
+                        <span class="highlight">Silicon in Computer Chips</span>
+                        By Hao
+                        <span class="highlight">What is a Semiconductor?</span>
+                        Semiconductors are materials with tune-able electrical conductivity. Though unusable in its natural form, processing
+                        allows it to become a functional device tuned for specific needs.
+                        <span class="highlight">What is Silicon?</span>
+                        Silicon is one of the metalloids, which exhibits metal-like characteristics while not being a metal. Being not as good
+                        as conductors at conducting electricity and only conducting a small amount of electricity, it is thus classified as a
+                        semiconductor.
+                        <span class="highlight">What is Doping?</span>
+                        The process of mixing silicon (in this case) with other elements and making the element impure is called doping. Since
+                        silicon atoms have 4 valence shell electrons, it also bonds with 4 other silicon atoms each, creating a lattice shape.
+                        There are two types of impurities in a silicon crystal - N-Type and P-type. In N-Type semiconductors, elements like
+                        phosphorus (with 5 valence shell electrons) can be added to create bonds with 4 other silicon atoms, with one extra
+                        electron left to move around, which increases the silicon's overall conductivity significantly, with the charge carriers
+                        being the electrons. In P-Type semiconductors, electrons with less than 3 valence shell electrons, such as boron is
+                        added to the silicon, it will bond with only 3 other silicon atoms, resulting in a "hole" between them, which will want
+                        to accept electrons into them to create more bonds, with the "holes" being the charge carriers.
+                        <span class="highlight">Why is Silicon a Good Fit For Use in Transistors?</span>
+                        While chips require electricity to run, it requires the ability to let electricity only "pass" through certain
+                        transistors, thus not overloading the chip with instructions. Silicon also is one of the most common elements and
+                        operates well at a wide range of temperatures. Its conductivity can be changed by increasing temperature, as well as
+                        through doping it with other elements. The P-Type and N-Type silicon can be put together into PNP or NPN transistors.
+                        When the start and end terminals are connected to a power source, no electrons flow, but when a separate small current
+                        is applied to the middle semiconductor, a large current will flow from one end of the transistor to the other. By
+                        applying the current to the middle semiconductor on or off to control when current flows through a semiconductor, logic
+                        gates can be created. These logic gates are the building blocks of processing chips.
+
+                        <span>Thank You!</span>
+                    </p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <div class="modal">
+        <div class="modal credits">
             <div class="credits-modal">
                 <div class="modal-header">
                     <p>Credits</p>
@@ -104,6 +142,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/661b14556a.js" crossorigin="anonymous"></script>
+    <script src="./js/video.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/copyright.js"></script>
 </body>

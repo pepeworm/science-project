@@ -60,6 +60,7 @@ hr {
     background-color: $primary;
     color: $primary-bg;
     padding: 0.4rem 0.6rem;
+    cursor: pointer;
 
     i {
         margin-right: 0.2rem;
@@ -85,6 +86,67 @@ hr {
 
 .underline {
     text-decoration: underline;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: $modal-bg;
+    display: none;
+
+    &.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .credits-modal {
+        background-color: $secondary-bg;
+        border: 1px solid $box-border;
+        padding: 1rem 0;
+        width: 25rem;
+
+        .modal-header,
+        hr,
+        .modal-body {
+            width: 85%;
+            margin: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .close {
+                i {
+                    color: $secondary;
+                    cursor: pointer;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        hr {
+            border: none;
+            border: 1px solid $box-border;
+            margin: 1rem auto 1.8rem;
+        }
+
+        .modal-body {
+
+            li:not(:first-child),
+            li:not(:last-child) {
+                margin: 1rem auto;
+            }
+        }
+    }
 }
 
 img.wave {
@@ -621,6 +683,39 @@ main {
             }
         }
     }
+
+    #video {
+        iframe {
+            border: 2px solid $box-border;
+        }
+
+        .transcribe {
+            margin: auto;
+            max-width: 55%;
+
+            h1 {
+                margin: 3rem auto;
+                font-size: 3.5rem;
+            }
+
+            .container {
+                span {
+                    font-size: 1.8rem;
+                    display: block;
+                    margin-bottom: 0.8rem;
+
+                    &:not(:first-child) {
+                        margin-top: 2rem;
+                    }
+
+                    &:not(.highlight) {
+                        font-size: 1.1rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer {
@@ -629,67 +724,6 @@ footer {
     align-items: center;
     justify-content: center;
     padding-bottom: 3rem;
-
-    .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        background-color: $modal-bg;
-        display: none;
-
-        &.show {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .credits-modal {
-            background-color: $secondary-bg;
-            border: 1px solid $box-border;
-            padding: 1rem 0;
-            width: 25rem;
-
-            .modal-header,
-            hr,
-            .modal-body {
-                width: 85%;
-                margin: auto;
-            }
-
-            .modal-header {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-
-                .close {
-                    i {
-                        color: $secondary;
-                        cursor: pointer;
-                        font-size: 1.1rem;
-                    }
-                }
-            }
-
-            hr {
-                border: none;
-                border: 1px solid $box-border;
-                margin: 1rem auto 1.8rem;
-            }
-
-            .modal-body {
-
-                li:not(:first-child),
-                li:not(:last-child) {
-                    margin: 1rem auto;
-                }
-            }
-        }
-    }
 
     hr {
         margin: 3.8rem auto;
